@@ -76,7 +76,7 @@ class AdminPanelTest extends TestCase
     public function test_custom_validation_rejects_missing_password_only(): void
     {
         $response = $this->post('/admin/login', [
-            'email' => 'nadia@scanwell.app',
+            'email' => 'admin@scanwell.app',
             'password' => '',
         ]);
 
@@ -88,7 +88,7 @@ class AdminPanelTest extends TestCase
     public function test_custom_validation_rejects_short_password(): void
     {
         $response = $this->from('/admin/login')->post('/admin/login', [
-            'email' => 'nadia@scanwell.app',
+            'email' => 'admin@scanwell.app',
             'password' => '123',
         ]);
 
@@ -101,7 +101,7 @@ class AdminPanelTest extends TestCase
     public function test_custom_validation_rejects_incorrect_credentials(): void
     {
         $response = $this->from('/admin/login')->post('/admin/login', [
-            'email' => 'nadia@scanwell.app',
+            'email' => 'admin@scanwell.app',
             'password' => 'wrongpassword123',
         ]);
 
@@ -134,7 +134,7 @@ class AdminPanelTest extends TestCase
     public function test_active_admin_can_login_and_access_dashboard(): void
     {
         $response = $this->post('/admin/login', [
-            'email' => 'nadia@scanwell.app',
+            'email' => 'admin@scanwell.app',
             'password' => 'password123',
         ]);
 
@@ -151,7 +151,7 @@ class AdminPanelTest extends TestCase
     public function test_active_admin_can_login_with_remember_me(): void
     {
         $response = $this->post('/admin/login', [
-            'email' => 'nadia@scanwell.app',
+            'email' => 'admin@scanwell.app',
             'password' => 'password123',
             'remember' => '1',
         ]);

@@ -61,7 +61,7 @@ class ScanWellDemoSeeder extends Seeder
         $admins = [
             [
                 'name' => env('ADMIN_SUPER_NAME', 'Nadia Karim'),
-                'email' => env('ADMIN_SUPER_EMAIL', 'nadia@scanwell.app'),
+                'email' => env('ADMIN_SUPER_EMAIL', 'admin@scanwell.app'),
                 'password' => env('ADMIN_SUPER_PASSWORD', 'password123'),
                 'role' => env('ADMIN_SUPER_ROLE', 'Super Admin'),
                 'status' => 'Active',
