@@ -60,7 +60,7 @@ class ScanWellDemoSeeder extends Seeder
         // 3. Admins
         $admins = [
             [
-                'name' => env('ADMIN_SUPER_NAME', 'Nadia Karim'),
+                'name' => env('ADMIN_SUPER_NAME', 'Admin'),
                 'email' => env('ADMIN_SUPER_EMAIL', 'admin@scanwell.app'),
                 'password' => env('ADMIN_SUPER_PASSWORD', 'password123'),
                 'role' => env('ADMIN_SUPER_ROLE', 'Super Admin'),
@@ -726,7 +726,7 @@ class ScanWellDemoSeeder extends Seeder
                 'title' => 'Understand health flags',
                 'body' => 'See red, yellow, and green flags for sugar, sodium, fat, additives, allergens, and other concern areas.',
                 'status' => 'Published',
-                'editor' => 'Nadia Karim',
+                'editor' => 'Admin',
             ],
             [
                 'id' => 2,
@@ -786,7 +786,7 @@ class ScanWellDemoSeeder extends Seeder
                 'title' => 'No saved products yet',
                 'body' => 'Save products after scanning or searching to find them here later.',
                 'status' => 'Published',
-                'editor' => 'Nadia Karim',
+                'editor' => 'Admin',
             ]
         ];
 
@@ -859,8 +859,8 @@ class ScanWellDemoSeeder extends Seeder
             ['action' => 'Published health rule v3.1', 'detail' => 'High sodium — general packaged food', 'user' => 'Amina Rahman', 'status' => 'Published'],
             ['action' => 'Paused campaign', 'detail' => 'Compare Before You Choose', 'user' => 'Rina Das', 'status' => 'Paused'],
             ['action' => 'Approved submission SW-10470', 'detail' => 'Tomato Basil Crackers', 'user' => 'Fahim Noor', 'status' => 'Approved'],
-            ['action' => 'Updated onboarding content', 'detail' => 'onboarding.personalized.title', 'user' => 'Nadia Karim', 'status' => 'Published'],
-            ['action' => 'Changed app control', 'detail' => 'Minimum version 1.3.6 → 1.4.0', 'user' => 'Nadia Karim', 'status' => 'Active'],
+            ['action' => 'Updated onboarding content', 'detail' => 'onboarding.personalized.title', 'user' => 'Admin', 'status' => 'Published'],
+            ['action' => 'Changed app control', 'detail' => 'Minimum version 1.3.6 → 1.4.0', 'user' => 'Admin', 'status' => 'Active'],
         ];
 
         foreach ($audits as $audit) {

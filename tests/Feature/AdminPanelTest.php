@@ -144,7 +144,7 @@ class AdminPanelTest extends TestCase
         // Access dashboard now that session is active
         $dashResponse = $this->get('/admin');
         $dashResponse->assertStatus(200);
-        $dashResponse->assertSee('Nadia Karim');
+        $dashResponse->assertSee('Admin');
         $dashResponse->assertSee('Catalog Products');
     }
 
@@ -210,7 +210,7 @@ class AdminPanelTest extends TestCase
         ]);
         $this->assertDatabaseHas('audit_logs', [
             'action' => 'Created product',
-            'user' => 'Nadia Karim',
+            'user' => 'Admin',
         ]);
     }
 
@@ -663,7 +663,7 @@ class AdminPanelTest extends TestCase
         $response = $this->actingAs($this->admin, 'admin')->get('/admin/security');
         $response->assertStatus(200);
         $response->assertSee('Admin & Security');
-        $response->assertSee('Nadia Karim');
+        $response->assertSee('Admin');
     }
 
     public function test_global_search_endpoint_returns_json_results(): void
